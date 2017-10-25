@@ -1,0 +1,16 @@
+<div>
+    <form>
+        <div *ngIf="editTitle" class="form-group">
+            <input type="input" class="form-control" name="title" [(ngModel)]="video.title" required>
+        </div>
+        <h3 *ngIf="!editTitle" (click)="onTitleClick()">{{video.title}}</h3>
+        <div class="form-group">
+            <input type="input" class="form-control" name="url" [(ngModel)]="video.url" required>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="desc" [(ngModel)]="video.description" rows="5">
+            </textarea>
+        </div>
+
+    </form>
+</div>
